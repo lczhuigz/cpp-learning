@@ -1,6 +1,8 @@
 #include <iostream>
 
+
 using namespace std;
+
 
 int main(int argc,char **argv){
     float f1 = 2.34E+10f;

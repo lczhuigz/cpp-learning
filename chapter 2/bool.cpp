@@ -3,6 +3,7 @@
 
 using namespace std;
 
+
 int main(int argc,char **argv){
     bool b1 = true;
     int i = b1;
