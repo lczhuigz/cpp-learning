@@ -5,6 +5,7 @@ using namespace std;
 
 
 int main(int argc,char **argv){
+
     float f1 = 2.34E+10f;
     float f2 = f1 + 10;
     cout.setf(ios_base::fixed, ios_base::floatfield);
@@ -13,5 +14,6 @@ int main(int argc,char **argv){
     cout << "f1 - f2 = " << f1 - f2 << endl;
     cout << "(f1 - f2 == 0) = " << (f1 - f2 ==0) << endl;
 
+    
     return 0;
 }

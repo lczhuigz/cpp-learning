@@ -5,6 +5,7 @@ using namespace std;
 
 
 int main(int argc,char **argv){
+
     bool b1 = true;
     int i = b1;
     bool b2 = -256;
@@ -14,6 +15,6 @@ int main(int argc,char **argv){
     cout << "b2=" << b2 << endl;
     cout << true << endl;
 
+    
     return 0;
-
 }

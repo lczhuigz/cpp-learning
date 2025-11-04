@@ -6,6 +6,7 @@ using namespace std;
 
 
 int main(int argc,char **argv){
+
     char rabbit[16] = {'P','e','t','e','r'};
     cout << "String length is " << strlen(rabbit) << endl;
 
@@ -24,5 +25,6 @@ int main(int argc,char **argv){
     char name[10] = {'Y','u','\0','S','.','0'};
     cout << strlen(name) << endl;
 
+    
     return 0;
 }

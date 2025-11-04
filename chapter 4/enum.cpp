@@ -76,7 +76,7 @@ int64_t l1norm(struct Point pt){
     switch(pt.type){
 
         case (TYPE_INT8):
-
+        
             result = abs(pt.data8[0]) + abs(pt.data8[1]) + abs(pt.data8[2]);
             break;
         

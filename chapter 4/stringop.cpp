@@ -6,6 +6,7 @@ using namespace std;
 
 
 int main(int argc,char **argv){
+    
     char str1[] = "Hello, \0CPP";
     char str2[] = "SUSTech";
     char result[128];

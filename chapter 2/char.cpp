@@ -5,6 +5,7 @@ using namespace std;
 
 
 int main(int argc,char **argv){
+
     char c1 = 'C';
     char c2 = 80;
     char c3 = 0x50;
@@ -15,5 +16,6 @@ int main(int argc,char **argv){
     cout << c4 << endl;
     cout << c5 << endl;
 
+    
     return 0;
 }

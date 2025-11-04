@@ -24,5 +24,6 @@ int main(int argc,char **argv){
     cout << "Size of Student1: " << sizeof(Student1) << endl;
     cout << "Size of Student2: " << sizeof(Student2) << endl;
 
+    
     return 0;
 }

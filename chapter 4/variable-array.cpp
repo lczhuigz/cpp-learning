@@ -5,6 +5,7 @@ using namespace std;
 
 
 int main(int argc,char **argv){
+
     int num_array1[5] = {0,1};
 
     cout << "sizeof(num_array1) = " << sizeof(num_array1) << endl;
@@ -18,5 +19,6 @@ int main(int argc,char **argv){
         len ++;
     }
 
+    
     return 0;
 }
