@@ -18,7 +18,7 @@ struct Point
 };
 
 // Specialization for Point + Point operation
-template
+template<>      //特例化
 Point sum<Point>(Point pt1, Point pt2){
 
     cout << "The input type is " << typeid(pt1).name() << endl;
