@@ -1,6 +1,9 @@
 #pragma once
+
+
 #include <iostream>
 #include <cstring>
+
 
 class MyString{
 
@@ -12,30 +15,20 @@ class MyString{
     public:
 
         MyString(int buf_len = 64, const char * data = NULL){
-
+            
             std::cout << "Constructor(int, char*)" << std::endl;
             this->buf_len = 0;
             this->characters = NULL;
             create(buf_len, data);
         }
+        
+        MyString(const MyString &) = delete;    //显式删除函数（explicitly deleted functions）:= delete 的含义是：告诉编译器不要生成这个函数的默认版本，并且禁止使用这个函数。
 
-        MyString(const MyString & ms){
-
-            std::cout << "Constructor(MyString&)" << std::endl;
-            this->buf_len = 0;
-            this->characters = NULL;
-            create(ms.buf_len, ms.characters);
-        }
+        MyString & operator=(const MyString &) = delete;
 
         ~MyString(){
 
             release();
-        }
-
-        MyString & operator=(const MyString &ms){
-
-            create(ms.buf_len, ms.characters);
-            return *this;
         }
 
         bool create(int buf_len,  const char * data){
@@ -45,19 +38,23 @@ class MyString{
             this->buf_len = buf_len;
 
             if( this->buf_len != 0){
+
                 this->characters = new char[this->buf_len]{};
             }
+
             if(data){
+
                 strncpy(this->characters, data, this->buf_len);
             }
                 
             return true;
         }
-
+        
         bool release(){
 
             this->buf_len = 0;
             if(this->characters!=NULL){
+
                 delete []this->characters;
                 this->characters = NULL;
             }
@@ -66,7 +63,7 @@ class MyString{
         }
 
         friend std::ostream & operator<<(std::ostream & os, const MyString & ms){
-            
+
             os << "buf_len = " << ms.buf_len;
             os << ", characters = " << static_cast<void*>(ms.characters);
             os << " [" << ms.characters << "]";
