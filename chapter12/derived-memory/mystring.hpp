@@ -81,26 +81,28 @@ class MyString{
         }
 };
 
-class MyMap: public MyString
-{
-    private:
+// class MyMap: public MyString
+// {
+//     private:
 
-        char * keyname;
-        MyMap(const char * key, const char * value)
-        {
-            ...
-        }
-        MyMap(const MyMap & mm): MyString(mm.buf_len, mm.characters)
-        {
-            //allocate memory for keyname
-            //and hard copy from mm to *this
-        }
-        MyMap & operator=(const MyMap &mm)
-        {
-            MyMap::operator=(mm);
-            //allocate memory for keyname
-            //and hard copy from mm to *this
-            return *this;
-        }
+//         char * keyname;
 
-};
+//         MyMap(const char * key, const char * value)
+//         {
+//             ...
+//         }
+
+//         MyMap(const MyMap & mm): MyString(mm.buf_len, mm.characters)
+//         {
+//             //allocate memory for keyname
+//             //and hard copy from mm to *this
+//         }
+
+//         MyMap & operator=(const MyMap &mm)
+//         {
+//             MyMap::operator=(mm);
+//             //allocate memory for keyname
+//             //and hard copy from mm to *this
+//             return *this;
+//         }
+// };
