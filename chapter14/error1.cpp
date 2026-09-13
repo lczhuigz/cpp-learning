@@ -9,7 +9,7 @@ float ratio(float a, float b){
     if(fabs(a + b) < FLT_EPSILON){
 
         std::cerr << "The sum of the two arguments is close to zero." << std::endl;
-        std::abort();
+        std::abort();   // kill program
     }
 
     return (a - b) / (a + b);
